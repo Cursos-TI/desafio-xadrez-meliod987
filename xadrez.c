@@ -28,5 +28,77 @@ int main() {
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
 
+    int i;
+
+    //TORRE - Movimento vertical com FOR
+
+    printf("Movimento da TORRE (FOR):\n");
+    for (i = 1; i <= 8; i++) {
+        printf("Torre move para cima: casa %d\n", i);
+    }
+    for (i = 1; i <= 8; i++) {
+        printf("Torre move para direita: casa %d\n", i);
+    }
+
+    //BISPO - Movimento diagonal com WHILE
+    int linha = 1, coluna = 1;
+    printf("\nMovimento do BISPO (WHILE):\n");
+    while (linha <= 8 && coluna <= 8) {
+        printf("Bispo move para diagonal ↘: linha %d, coluna %d\n", linha, coluna);
+        linha++;
+        coluna++;
+    }
+
+
+    //Rainha - Movimento completo com DO-WHILE
+    int pos;
+
+    printf("\nMovimento da RAINHA (DO-WHILE):\n");
+
+    // Vertical ↑
+    pos = 1;
+    do {
+        printf("Rainha move para cima: linha %d\n", pos);
+        pos++;
+    } while (pos <= 8);
+
+    // Vertical ↓
+    pos = 8;
+    do {
+        printf("Rainha move para baixo: linha %d\n", pos);
+        pos--;
+    } while (pos >= 1);
+
+    // Horizontal →
+    pos = 1;
+    do {
+        printf("Rainha move para direita: coluna %d\n", pos);
+        pos++;
+    } while (pos <= 8);
+
+    // Horizontal ←
+    pos = 8;
+    do {
+        printf("Rainha move para esquerda: coluna %d\n", pos);
+        pos--;
+    } while (pos >= 1);
+
+    // Diagonal ↗
+    int lin = 1, col = 1;
+    do {
+        printf("Rainha move na diagonal ↗: linha %d, coluna %d\n", lin, col);
+        lin++;
+        col++;
+    } while (lin <= 8 && col <= 8);
+
+    // Diagonal ↙
+    lin = 8; col = 8;
+    do {
+        printf("Rainha move na diagonal ↙: linha %d, coluna %d\n", lin, col);
+        lin--;
+        col--;
+    } while (lin >= 1 && col >= 1);
+
+
     return 0;
 }
